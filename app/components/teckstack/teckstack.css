@@ -1,0 +1,76 @@
+.our-tech-stack{
+  color: white;
+}
+
+.tech-stack-heading {
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.tech-stack-heading h2 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.tech-stack-para {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  padding: 0rem 15rem;
+  color: #94979C;
+}
+
+.tech-stack-contents {
+  margin: 1rem;
+  padding:1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.tech-stack-content {
+  text-align: center; 
+  width: 25%;
+}
+
+.tech-name {
+  font-size: 1.25rem;
+}
+
+.tech-desc {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  color: #94979C;
+}
+
+.tech-desc p {
+  font-size: 1rem;
+}
+@media screen and (max-width :768px) {
+  .tech-stack-heading h2 {
+      font-size: 1.75rem;
+  }
+
+  .tech-stack-para {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      padding: 0rem 1.5rem;
+      color: #94979C;
+      text-align: center;
+  }
+
+  .tech-desc {
+      font-size: 1rem;
+      color: #94979C;
+  }
+
+  .tech-stack-content {
+      text-align: center; 
+      width: 100%;
+  }
+
+  .tech-desc p {
+    font-size: 1.1rem;
+}
+}

@@ -1,0 +1,119 @@
+header {
+    position: sticky;
+    top: 5px;
+    z-index: 1000;
+    border: 1px solid #22262F;
+    border-radius: 15px;
+    margin: 0px 120px;
+    background-color: #13161B;
+}
+
+header,
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header ul {
+    width: 50%;
+    margin: 10px 0px;
+}
+
+header ul li {
+    list-style: none;
+    color: #F7F7F7;
+}
+
+.nav-route li {
+    padding-right: 30px;
+    color: #94979C;
+}
+
+.contact-btn {
+    width: 137;
+    height: 48;
+    padding-top: spacing-lg;
+    padding-right: 24px;
+    padding-bottom: spacing-lg;
+    padding-left: 24px;
+    gap: spacing-xs;
+    border-radius: 1000px;
+    border-width: 2px;
+    background-color: #13161B;
+    color: #F7F7F7;
+}
+
+.brand-card-name {
+    font-family: emoji;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-size: 2rem;
+    margin-left: 8px
+}
+
+.brand-card {
+    justify-content: left;
+}
+
+.brand-contact {
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.brand-card-icon {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+a , .resume-card{
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
+.nav-route li:hover{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-btn:hover{
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    header ul {
+        width: 100%;
+        padding: 0px;
+    }
+
+    header {
+        margin: 5px;
+    }
+
+    header ul li {
+        font-size: 10px;
+    }
+
+    .nav-route li {
+        padding-right: 8px;
+    }
+
+    header,
+    header ul {
+        justify-content: center;
+
+    }
+
+    .brand-contact {
+        display: none;
+    }
+
+    .brand-card {
+        padding: 0px 0px 0px 6px;
+    }
+
+    .brand-card-name {
+        font-size: 1.7rem
+    }
+}

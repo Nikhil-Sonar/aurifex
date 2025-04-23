@@ -1,0 +1,83 @@
+hr {
+  background-color: #94979C;
+}
+
+/* Layout */
+.impact-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #F9F5FF;
+}
+
+/* Section impact-section-heading */
+.impact-section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.impact-section-heading h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.impact-section-heading p {
+  font-size: 1.1rem;
+  color: #94979C;
+}
+
+/* Stats Container */
+.impact-section-stats {
+  display: flex;
+  justify-content: space-around;
+  background-color: #13161B;
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Stat Card */
+.impact-section-stats-card {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.impact-section-stats-value {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1.8rem;
+}
+
+.impact-section-stats-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #CBD5E1;
+}
+
+@media screen and (max-width:367px) {
+
+
+  .impact-section-heading h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .impact-section-heading p {
+    font-size: 1rem;
+    color: #94979C;
+  }
+
+  .impact-section-stats-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .impact-section-stats-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #CBD5E1;
+  }
+}

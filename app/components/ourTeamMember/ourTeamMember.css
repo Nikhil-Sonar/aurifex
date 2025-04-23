@@ -1,0 +1,138 @@
+.our-team-member {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 0px 50px 90px;
+  }
+  
+  .our-team-member-heading h2{
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .our-team-member-cards {
+    width: 100%;
+    overflow: visible;
+  }
+  
+  .our-team-member-card {
+    position: relative;
+    width: 24rem !important;
+    margin-right: 1rem;
+  }
+  
+  /* .slick-slide {
+    width: 24rem !important;
+  }
+   */
+  .our-team-member-card img {
+    width: 384px;
+    height: 440px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  .our-team-member-card-detail {
+    position: absolute;
+    top: 54.2%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.5rem;
+    color: #ffffff;
+    background: #a6a6a670;
+    backdrop-filter: blur(16px);
+    border-radius: 0 0 2px 2px;
+    display: none;
+  }
+
+  .our-team-member-card:hover .our-team-member-card-detail {
+    display: block;
+  }
+  
+  .our-team-member-common-name {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    margin-top: 4px;
+  }
+  
+  .our-team-member-common-designation {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .our-team-member-common-disc {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .our-team-member-social {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+  
+  .our-team-member-social li img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .our-team-member-cards .slick-slider .slick-list .slick-track .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    width: auto !important;
+  }
+
+
+  .our-team-member-card {
+    width: 384px !important; /* adjust as needed */
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .our-team-member {
+      padding: 30px 0px 30px 20px;
+    }
+  
+    .our-team-member-heading {
+      font-size: 1.4rem;
+    }
+  
+    .our-team-member-card {
+      width: 270px !important;
+      margin-right: 40px;
+    }
+
+    .our-team-member-heading h2{
+      font-size: 1.75rem;
+    }
+  
+    /* .slick-slide {
+      width: 294px !important;
+    } */
+  
+    .our-team-member-card img {
+      width: 270px;
+      height: 324px;
+    }
+  
+    .our-team-member-card-detail {
+      top: 52%;
+      padding: 0.75rem 1rem;
+    }
+  
+    .our-team-member-common-name {
+      font-size: 1rem;
+    }
+  
+    .our-team-member-social li img {
+      width: 14px;
+      height: 14px;
+    }
+  }

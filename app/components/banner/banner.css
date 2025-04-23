@@ -1,0 +1,180 @@
+/* === Banner Background with Grid & Glow === */
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    z-index: 0;
+    overflow: hidden;
+    background-color: #0b0b0f;
+}
+
+.gridBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 94px;
+    background-color: #0C0E12;
+    background-image:
+        /* Grid lines */
+        linear-gradient(rgba(255, 255, 255, 0.03) 1.2px, transparent 1.2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1.2px, transparent 1.2px),
+
+        /* Alternating box pattern */
+        repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 120px,
+            rgba(255, 255, 255, 0.03) 100px,
+            rgba(255, 255, 255, 0.03) 120px,
+            transparent 120px,
+            transparent 180px),
+        repeating-linear-gradient(to right,
+            transparent,
+            transparent 120px,
+            rgba(255, 255, 255, 0.03) 40px,
+            rgba(255, 255, 255, 0.03) 120px,
+            transparent 120px,
+            transparent 180px),
+
+        radial-gradient(circle at center, rgba(77, 63, 237, 0.2), transparent 40%);
+        /* linear-gradient(to bottom, transparent 0%, #000 100%); */
+
+    background-size: 100px 100px, 100px 100px, 180px 180px, 180px 180px, cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.gridBackground::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-image: radial-gradient(circle, rgba(70, 62, 152, 0.89) -100%, #00000000 54%); */
+    z-index: 2;
+    pointer-events: none;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.banner-card-one-video,
+.banner-card-three-video {
+    width: 500px;
+    height: 500px;
+    opacity: 0.6;
+    transform: rotate(135deg);
+}
+
+.banner-card-one-video {
+    float: left;
+    margin-left: -290px;
+}
+
+.banner-card-three-video {
+    float: right;
+    margin-right: -290px;
+}
+
+.banner-card-two{
+    margin-bottom: 50px;
+}
+
+.banner-card-two h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 1.1;
+    text-align: center;
+    color: #F7F7F7;
+    letter-spacing: -2px;
+    margin: 0px 0px 10px;
+}
+
+.banner-card-two h1 span {
+    font-style: italic;
+    font-family: emoji;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #d1baff;
+}
+
+.banner-card-two p {
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.58px;
+    text-align: center;
+    color: #94979C;
+    padding: 0 100px;
+    margin: 0 50px;
+    font-size: 1.2rem;
+}
+
+.banner-plus {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: auto;
+    z-index: 4;
+    top: 590px;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-card-two p{
+        padding: 0px;
+        margin: 0px;
+        letter-spacing: 0px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    .banner-card-one-video, .banner-card-three-video {
+        width: 150px;
+        height: 150px;
+    }
+    .banner-card-three-video {
+        margin-right: -70px;
+    }
+    .banner-card-one-video {
+        margin-left: -70px;
+    }
+
+    .banner-card-two h1{
+        font-size: 2.2rem;
+        margin-top: 90px;
+    }
+    .banner-text {
+        padding: 0px;
+        width: 100%;
+        overflow: auto;
+        height: 90vh;
+    }
+
+    .banner-card-two {
+        margin-bottom: 0px;
+        margin-top: 70px;
+    }
+
+    .banner-background {
+        height: 90vh;
+    }
+
+    .banner-plus {
+        width: 70px;
+    }
+    .gridBackground {
+        top: 55px;
+    }
+}

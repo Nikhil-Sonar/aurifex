@@ -1,0 +1,190 @@
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: 0.9cm 2cm;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 40rem;
+  line-height: 1.2rem;
+}
+
+.contact-form h2 {
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.contact-form p {
+  margin-bottom: 2rem;
+  color: #94979C;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.input-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field label {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.input-field input,
+.input-field textarea,
+.phone-wrapper input,
+.phone-wrapper select {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #373A41;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-wrapper select {
+  width: 5rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+
+.checkbox-wrapper a {
+  color: #94979C;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0f0f0f;
+  color: #fff;
+  border: 1px solid whitesmoke;
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 35rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 40rem;
+}
+
+.checkbox-wrapper-label{
+  color: #94979C;
+  font-size: 1.1rem;
+}
+
+#agree{
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  margin: 0px;
+  accent-color: #ffffff;
+  appearance: none;
+  border: 1px solid #373A41;
+  -webkit-appearance: none;
+}
+
+input[type=checkbox]:checked{
+  font-family: "Font Awesome 5 Free";
+  background-color: #ffffff;
+  content: "\f00c";
+  font-size: 2rem;
+  font-weight: 900;
+  
+}
+
+/* .input-field.underline {
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 100%;
+}
+.input-field .underline:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  background: #373A41;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before{
+    transform: scale(1);
+} */
+
+/* input[type="checkbox"] {
+  accent-color: #94979C
+  } */
+
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
+   }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}

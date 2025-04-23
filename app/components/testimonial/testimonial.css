@@ -1,0 +1,151 @@
+.testimonial-section {
+  color: white;
+  padding: 0rem 2rem;
+}
+
+.testimonial-box {
+  max-width: 1200px;
+  margin: 0px auto 0px 100px;
+  display: flex;
+}
+
+.testimonial-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-heading .highlight {
+  font-style: italic;
+}
+
+.testimonial-slider-container {
+  position: relative;
+}
+
+.testimonial-slide {
+  padding: 1rem;
+  display: flex !important;
+  justify-content: left;
+  width: 80rem !important;
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 0px 5rem;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  flex: 1;
+}
+
+.quote {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  font-family: 'Geist';
+  font-weight: 300;
+}
+
+.author-name {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.author-title {
+  font-size: 2rem;
+  color: #ccc;
+  margin-top: 10px;
+  font-family: auto;
+}
+
+.author-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0px 20px;
+    padding: 0px;
+    gap: 10;
+  }
+
+  .testimonial-section {
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+  .testimonial-heading{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 300;
+  }
+
+  .testimonial-box {
+    display: block;
+  }
+
+  .testimonial-slide {
+    padding: 1rem;
+    justify-content: left;
+    width: 19rem !important;
+  }
+
+  .profile-image {
+    margin-bottom: 1rem;
+    margin-right: 2.5rem;
+  }
+
+  .testimonial-box {
+    margin: 10px;
+  }
+
+  .quote {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 200;
+  }
+
+  .testimonial-card-icon-parent {
+    display: flex;
+    width: 100%;
+  }
+
+  .author-mobile {
+    display: block;
+  }
+
+  .author-desktop {
+    display: none;
+  }
+
+  .author-name,
+  .author-title {
+    font-size: 1rem;
+  }
+
+  /* .slick-slide{
+    width: unset !important;
+  } */
+  .testimonial-slider-container {
+    overflow: hidden;
+}
+}
