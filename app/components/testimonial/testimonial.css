@@ -10,12 +10,13 @@
 }
 
 .testimonial-heading {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
 }
 
 .testimonial-heading .highlight {
   font-style: italic;
+  margin-right: 0.8rem;
 }
 
 .testimonial-slider-container {
@@ -83,20 +84,21 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0px 20px;
+    margin: 0px 6px;
     padding: 0px;
-    gap: 10;
+    gap: 1rem;
   }
 
   .testimonial-section {
     color: white;
-    padding: 3rem 1rem;
+    padding: 0rem;
   }
 
   .testimonial-heading{
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     font-weight: 300;
+    padding: 0rem 1.8rem;
   }
 
   .testimonial-box {
@@ -106,7 +108,9 @@
   .testimonial-slide {
     padding: 1rem;
     justify-content: left;
-    width: 19rem !important;
+    width: 20.5rem !important;
+    margin: 0rem 2rem;
+    height: 190px;
   }
 
   .profile-image {

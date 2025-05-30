@@ -1,4 +1,5 @@
 'use client';
+import { motion } from 'framer-motion';
 import React from 'react';
 import "./testimonial.css";
 import Slider from "react-slick";
@@ -10,13 +11,14 @@ const Testimonial = () => {
   const sliderSettings = {
     infinite: true,
     dots: false,
-    speed: 1000,
+    speed: 1300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     arrows: false,
     variableWidth: true,
+    cssEase: 'ease-in-out', //added
     responsive: [
       {
         breakpoint: 768,
@@ -31,7 +33,7 @@ const Testimonial = () => {
   const listData = [
     {
       name: "Hardik Solanki",
-      image: "/prem.jpeg",
+      image: "hardik.jpeg",
       jobTitle: "CEO, Careerwale",
       discription: "Working with Aurifex was a game-changer for our Careerwale app. They understood our vision, delivered a sleek and intuitive design, and ensured a smooth user experience. Their team was proactive, communicative, and always ready to go the extra mile. Highly recommend!",
     },
@@ -44,10 +46,15 @@ const Testimonial = () => {
   ];
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 2, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}>
     <section className="testimonial-section">
       <div className="testimonial-box">
         <div className="testimonial-heading">
-          <p><span className="highlight">What </span>OUR Clients are SAYING...</p>
+          <p><span className="highlight">What</span>OUR Clients are SAYING...</p>
         </div>
 
         <div className="testimonial-slider-container">
@@ -56,7 +63,7 @@ const Testimonial = () => {
               <div className="testimonial-slide" key={index}>
                 <div className="testimonial-card">
                   <div className='testimonial-card-icon-parent'>
-                   <Image src={item.image as string} alt="Client Photo" className="profile-image" />
+                   <Image width={100} height={100} src={item.image as string} alt="Client Photo" className="profile-image" />
                   <div className="author author-mobile">
                       <p className="author-name">{item.name}</p>
                       <p className="author-title"><em>{item.jobTitle}</em></p>
@@ -76,6 +83,7 @@ const Testimonial = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 };
 

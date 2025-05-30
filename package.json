@@ -10,10 +10,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/instrument-sans": "^5.2.5",
+    "@next/font": "^14.2.15",
+    "framer-motion": "^12.9.2",
     "next": "^15.3.0",
     "node": "^23.11.0",
+    "npm": "^11.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-intersection-observer": "^9.16.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1"
   },

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Head from 'next/head';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '@fontsource/instrument-sans/400.css';
+import '@fontsource/instrument-sans/700.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css"></link>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <Head>
+        <title>Leading IT Solutions Partner | Custom Software, Web & Cloud Services</title>
+        <meta
+          name="description"
+          content="Accelerate your digital transformation with a trusted IT partner specializing in custom software development, enterprise web and mobile applications, and secure cloud infrastructure. Delivering scalable, future-ready solutions tailored to your business goals."
+        />
+        <link rel="icon" href="/aurifexLogo.svg" type="image/svg+xml"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css"></link>
+      </Head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

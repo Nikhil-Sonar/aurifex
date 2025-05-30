@@ -2,17 +2,32 @@ header {
     position: sticky;
     top: 5px;
     z-index: 1000;
-    border: 1px solid #22262F;
     border-radius: 15px;
     margin: 0px 120px;
-    background-color: #13161B;
+    background: linear-gradient(#060606, #3c3b3ba1) padding-box, linear-gradient(var(--angle), #6b6b6b, #384ce0) border-box;
+    border: 1px solid #1b1b1b;
+    animation: 6s rotate linear infinite;
 }
+
+@keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 1deg;
+    inherits: false;
+  }
 
 header,
 header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    font-family: 'Source Sans Pro Topnav', sans-serif;
 }
 
 header ul {
@@ -26,26 +41,24 @@ header ul li {
 }
 
 .nav-route li {
-    padding-right: 30px;
-    color: #94979C;
+    color: #ffffff;
 }
 
 .contact-btn {
-    width: 137;
-    height: 48;
-    padding-top: spacing-lg;
+    width: 137px;
+    height: 48px;
     padding-right: 24px;
-    padding-bottom: spacing-lg;
     padding-left: 24px;
-    gap: spacing-xs;
     border-radius: 1000px;
     border-width: 2px;
     background-color: #13161B;
     color: #F7F7F7;
+    cursor: pointer;
 }
 
 .brand-card-name {
     font-family: emoji;
+
     font-style: italic;
     font-weight: 500;
     letter-spacing: -1px;
@@ -67,28 +80,79 @@ header ul li {
     text-decoration: none;
 }
 
-a , .resume-card{
+a,
+.resume-card {
     text-decoration: none;
     cursor: pointer !important;
 }
 
-.nav-route li:hover{
+.nav-route li:hover {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-.contact-btn:hover{
-    font-size: 0.9rem;
+.contact-btn:hover {
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(129, 120, 138, 0.6),
+        0 0 25px rgba(176, 171, 171, 0.4);
+    transform: translateY(-3px);
 }
+
+.header-right {
+    display: none;
+}
+
+.sidenav {
+    display: none;
+}
+
+.hover-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline::after,
+  .hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #919191, #ffffff);
+    bottom: -5px;
+    font-size: 1.5rem;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .hover-underline::before {
+    /* top: -5px; */
+    transform-origin: left;
+  }
+  
+  .hover-underline:hover::after,
+  .hover-underline:hover::before {
+    transform: scaleX(1);
+  }
+  
 
 @media screen and (max-width: 768px) {
+
+    header {
+        background-color: #0a0d12;
+        border: unset;
+        border-radius: unset;
+        top: 0px;
+        margin: 0px 0px;
+        padding: 12px 6px;
+    }
+
     header ul {
         width: 100%;
         padding: 0px;
-    }
-
-    header {
-        margin: 5px;
     }
 
     header ul li {
@@ -99,6 +163,11 @@ a , .resume-card{
         padding-right: 8px;
     }
 
+    .contact-btn {
+        width: 130px;
+        height: 40px;
+    }
+
     header,
     header ul {
         justify-content: center;
@@ -106,7 +175,8 @@ a , .resume-card{
     }
 
     .brand-contact {
-        display: none;
+        display: flex;
+        padding-right: 8px;
     }
 
     .brand-card {
@@ -116,4 +186,64 @@ a , .resume-card{
     .brand-card-name {
         font-size: 1.7rem
     }
+
+    .nav-route {
+        display: none;
+    }
+
+    .nav-route li:hover {
+        color: white;
+        font-size: 1.1rem;
+        transform: translateY(-2px);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .contact-btn:hover {
+        box-shadow: unset;
+    }
+
+    .brand-contact {
+        display: none;
+    }
+
+    .header-right {
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin-right: 1rem;
+    }
+
+    .sidenav {
+        display: flex;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 4rem;
+        flex-direction: column;
+    }
+
+    .sidenav a {
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        color: #ffffff;
+        list-style: none;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #F7F7F7;
+        background-color: black;
+    }
+
 }

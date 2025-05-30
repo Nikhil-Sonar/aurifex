@@ -9,8 +9,10 @@ type ModalProps = {
     title: string;
     year: string;
     image: string;
+    card_view_title: string;
+    description: string;
   } | null;
-  onSendData: (message: string, itemVal: { title: string; year: string; image: string }) => void;
+  onSendData: (message: string, itemVal: { title: string; year: string; image: string; card_view_title: string; description: string }) => void;
 };
 
 const modal = React.memo(({ showCard, passData, onSendData }: ModalProps) => {
@@ -20,21 +22,19 @@ const modal = React.memo(({ showCard, passData, onSendData }: ModalProps) => {
       onSendData('hide', passData);
     }
   }, [passData, onSendData]);
-  
+
   return (
     <div className={`overlay ${showCard}`} >
       <div className="popup">
         <div onClick={handleEvent} className="close-btn">×</div>
         <div className="logo">
-           <Image  src={passData?.image as string}  alt="company logo" />
+          <Image width={32} height={32} src={passData?.image as string} alt="company logo" />
           <h2>{passData?.title}</h2>
         </div>
         <p>
-          Working with Aurifex was a game-changer for our fitness app. They understood our vision,
-          delivered a sleek and intuitive design, and ensured a smooth user experience. Their team was
-          proactive, communicative, and always ready to go the extra mile. Highly recommend!
+          {passData?.description}
         </p>
-        <div className="tags">EdTech | Mumbai</div> 
+        <div className="tags">EdTech | Mumbai</div>
       </div>
     </div>
   )

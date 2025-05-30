@@ -1,78 +1,85 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import "./ourImpactNew.css";
 
 const OurImpactNew = () => {
-  const [ProjectCompleted, setProjectCompleted] = useState(0);
-  const [ReturnCompleted, setReturnCompleted] = useState(0);
-  const [ClientCompleted, setClientCompleted] = useState(0);
-  const ProjectCount = 100;
-  const ReturnCount = 200;
-  const ClientCount = 400;
+  const [projectCompleted, setProjectCompleted] = useState(0);
+  const [returnCompleted, setReturnCompleted] = useState(0);
+  const [clientCompleted, setClientCompleted] = useState(0);
+
+  const PROJECT_COUNT = 5;
+  const RETURN_COUNT = 200;
+  const CLIENT_COUNT = 100;
+
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+    triggerOnce: true, // Only trigger once
+  });
 
   useEffect(() => {
-    let animationFrameIdProject: number;
-    let animationFrameIdReturn: number;
-    let animationFrameIdClient: number;
+    if (!inView) return;
 
-    const ProjectUpdateCount = () => {
-      const step = Math.ceil((ProjectCount - ProjectCompleted) / 450); // Adjust the step size as needed
-      if (ProjectCompleted < ProjectCount) {
-        setProjectCompleted((prevCount) => prevCount + step);
-        animationFrameIdProject = requestAnimationFrame(ProjectUpdateCount);
-      }
+    let animationId: number;
+
+    const animateCount = (
+      target: number,
+      setter: React.Dispatch<React.SetStateAction<number>>
+    ) => {
+      let count = 0;
+
+      const step = () => {
+        count += Math.ceil((target - count) / 20);
+        if (count >= target) {
+          setter(target);
+        } else {
+          setter(count);
+          animationId = requestAnimationFrame(step);
+        }
+      };
+
+      step();
     };
 
-    const ReturnUpdateCount = () => {
-      const step = Math.ceil((ReturnCount - ReturnCompleted) / 450); // Adjust the step size as needed
-      if (ReturnCompleted <= ReturnCount) {
-        setReturnCompleted((prevCount) => prevCount + step);
-        animationFrameIdReturn = requestAnimationFrame(ReturnUpdateCount);
-      }
-    };
+    animateCount(PROJECT_COUNT, setProjectCompleted);
+    animateCount(RETURN_COUNT, setReturnCompleted);
+    animateCount(CLIENT_COUNT, setClientCompleted);
 
-    const ClientUpdateCount = () => {
-      const step = Math.ceil((ClientCount - ClientCompleted) / 450); // Adjust the step size as needed
-      if (ClientCompleted <= ClientCount) {
-        setClientCompleted((prevCount) => prevCount + step);
-        animationFrameIdClient = requestAnimationFrame(ClientUpdateCount);
-      }
-    };
-
-    animationFrameIdProject = requestAnimationFrame(ProjectUpdateCount);
-    animationFrameIdReturn = requestAnimationFrame(ReturnUpdateCount);
-    animationFrameIdClient = requestAnimationFrame(ClientUpdateCount);
-
-    return () => {
-      cancelAnimationFrame(animationFrameIdProject);
-      cancelAnimationFrame(animationFrameIdReturn);
-      cancelAnimationFrame(animationFrameIdClient);
-    };
-  }, [ProjectCompleted, ReturnCompleted, ClientCompleted, ProjectCount, ReturnCount, ClientCount]); // Add missing dependencies
+    return () => cancelAnimationFrame(animationId);
+  }, [inView]);
 
   return (
-    <section className="impact-section">
-      <div className="impact-section-container">
-        <div className="impact-section-heading">
-          <h2>Our Impact New</h2>
-          <p>Everything you need to convert, engage, and retain more users.</p>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <section className="impact-section">
+        <div className="impact-section-container">
+          <div className="impact-section-heading">
+            <h2>Our Impact</h2>
+            <p>Everything you need to convert, engage, and retain more users.</p>
+          </div>
+          <div className="impact-section-stats">
+            <div className="impact-section-stats-card">
+              <p className="impact-section-stats-value">{projectCompleted}+</p>
+              <p className="impact-section-stats-label">Projects Completed</p>
+            </div>
+            <div className="impact-section-stats-card">
+              <p className="impact-section-stats-value">{returnCompleted}%</p>
+              <p className="impact-section-stats-label">Return on Investment</p>
+            </div>
+            <div className="impact-section-stats-card">
+              <p className="impact-section-stats-value">{clientCompleted}%</p>
+              <p className="impact-section-stats-label">Client Success</p>
+            </div>
+          </div>
         </div>
-        <div className="impact-section-stats">
-          <div className="impact-section-stats-card">
-            <p className="impact-section-stats-value">{ProjectCompleted}+</p>
-            <p className="impact-section-stats-label">Projects Completed</p>
-          </div>
-          <div className="impact-section-stats-card">
-            <p className="impact-section-stats-value">{ReturnCompleted}%</p>
-            <p className="impact-section-stats-label">Return on Investment</p>
-          </div>
-          <div className="impact-section-stats-card">
-            <p className="impact-section-stats-value">{ClientCompleted}%</p>
-            <p className="impact-section-stats-label">Client Success</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </motion.div>
   );
 };
 

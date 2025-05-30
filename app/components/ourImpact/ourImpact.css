@@ -13,8 +13,12 @@
 .our-impact-logos {
   display: flex;
   gap: 40px;
-  animation: scrollLogos 10s linear infinite;
+  animation: scrollLogos 30s linear infinite;
   width: fit-content;
+}
+
+.our-impact-logos img{
+  border-radius: 10px;
 }
 
 @keyframes scrollLogos {

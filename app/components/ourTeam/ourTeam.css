@@ -52,14 +52,15 @@
 }
 
 .our-team-cards-one-list li p {
-  margin: 0px 10px 0px 0px;
+  margin: 0px;
 }
 
-.our-team-cards-two img,
-.our-team-cards-three img,
-.our-team-cards-six img {
-  max-width: 580px;
+  .our-team-cards-two img,
+  .our-team-cards-three img,
+  .our-team-cards-six img {
+  max-width: 530px;
   height: 100%;
+  border-radius: 1.25rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -67,7 +68,8 @@
   .our-team-cards-two img,
   .our-team-cards-three img,
   .our-team-cards-six img {
-    max-width: 300px;
+    max-width: 360px;
+    height: 100%;
   }
 
   .our-team-cards-one-heading {
@@ -86,7 +88,12 @@
   .our-team-cards div {
     width: 100px;
     flex: 1 1 calc(50% - 20px);
-    padding: 30px 28px;
+    padding: 1.8rem 1.1rem;
     text-align: left;
+  }
+
+  .our-team-heading h2{
+    margin: 1rem 0rem;
+    font-size: 2.3rem;
   }
 }
