@@ -13,12 +13,14 @@ const ourImpactComp = () => {
         '/akshar-decore.png',
         '/scca-logo.png',
         '/sspc-logo.png',
+        "/pestmed-logo.jpeg",
         '/gandhi-investmall.png',
         '/hbr-tech.png',
         '/careerwale.png',
         '/akshar-decore.png',
         '/scca-logo.png',
         '/sspc-logo.png',
+        "/pestmed-logo.jpeg",
     ]
 
     return (

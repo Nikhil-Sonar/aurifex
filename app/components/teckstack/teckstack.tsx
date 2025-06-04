@@ -33,7 +33,7 @@ const teckstack = () => {
       discription: "Object-oriented, cross-platform language widely used in enterprise, Android, and backend development.",
     },
     {
-      techName: "Flutter",
+      techName: "Mobile App Development",
       image: "/flutterrr.svg",
       discription: "Work faster and smarter by integrating directly with Dropbox, right in the app interface.",
     },

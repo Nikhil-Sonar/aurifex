@@ -12,6 +12,9 @@ const Projects = () => {
     { src: '/myprojects-two.svg', title: 'CareerWale', type: 'Mobile App' },
     { src: '/myprojects-three.svg', title: 'Furrl', type: 'Mobile App' },
     { src: '/myprojects-four.svg', title: 'Akshar Decor', type: 'Website' },
+    { src: '/AurifexConect-img.jpeg', title: 'Aurifex Connect', type: 'Website' },
+    { src: '/Dashboard-Careeerwale-image.jpeg', title: 'CareerWale', type: 'Website' },
+    { src: '/image-scca.jpg', title: 'SCCA', type: 'Website' },
   ];
 
   useEffect(() => {
