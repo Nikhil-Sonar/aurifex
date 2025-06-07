@@ -8,13 +8,13 @@ const Projects = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const projectData = [
-    { src: '/myprojects-one.svg', title: 'Hommlie', type: 'Web app & Mobile App' },
-    { src: '/myprojects-two.svg', title: 'CareerWale', type: 'Mobile App' },
-    { src: '/myprojects-three.svg', title: 'Furrl', type: 'Mobile App' },
-    { src: '/myprojects-four.svg', title: 'Akshar Decor', type: 'Website' },
-    { src: '/AurifexConect-img.jpeg', title: 'Aurifex Connect', type: 'Website' },
-    { src: '/Dashboard-Careeerwale-image.jpeg', title: 'CareerWale', type: 'Website' },
-    { src: '/image-scca.jpg', title: 'SCCA', type: 'Website' },
+    { src: '/Hommile-project-image.png', title: 'Hommlie', type: 'Web app & Mobile App' },
+    { src: '/Careerwale-project-image.png', title: 'CareerWale', type: 'Mobile App' },
+    { src: '/Furrl-project-image.png', title: 'Furrl', type: 'Mobile App' },
+    { src: '/Akshar-decor-project-image.png', title: 'Akshar Decor', type: 'Website' },
+    { src: '/Aurifex-Connect-image.png', title: 'Aurifex Connect', type: 'Website' },
+    { src: '/Careerwale(1)-project-image.png', title: 'CareerWale', type: 'Website' },
+    { src: '/scca-project-image_.png', title: 'SCCA', type: 'Website' },
   ];
 
   useEffect(() => {

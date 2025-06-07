@@ -31,10 +31,10 @@ const ourTeamComp = () => {
                         <Image src="/codeImage.svg" width={580} height={564} alt="code image" />
                     </div>
                     <div className="our-team-cards-three">
-                        <Image src="/PortfolioMockup.svg" width={580} height={537} alt="code image" />
+                        <Image src="/Ui-ux.jpg" width={580} height={537} alt="code image" />
                     </div>
                     <div className="our-team-cards-four"> <Image src="/editIcon.svg" width={48} height={48} alt="code tag icon" />
-                        <p className="our-team-cards-one-heading"><strong>UX UI Design </strong></p>
+                        <p className="our-team-cards-one-heading"><strong>UX-UI Design </strong></p>
                         <p className="our-team-cards-one-para">Intuitive and user-centric UX/UI design that enhances engagement and drives conversions. We craft seamless digital experiences backed by research and testing.</p>
                         <ul className="our-team-cards-one-list">
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>User Research & Strategy – Understanding your audience to create data-driven, user-friendly experiences.</p></li>
@@ -53,33 +53,35 @@ const ourTeamComp = () => {
                     </div>
                     <div className="our-team-cards-six"> <Image src="/dashboardImage.svg" width={580} height={530} alt="dashboard image" /></div>
                     <div className="our-team-cards-two">
-                        <Image src="/codeImage.svg" width={580} height={564} alt="code image" />
+                        <Image src="/mobile-app-development.jpg" width={580} height={564} alt="code image" />
                     </div>
                     <div className="our-team-cards-one">
                         <Image src="/codeIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>Mobile-App Development</strong></p>
-                        <p className="our-team-cards-one-para">End-to-end mobile app solutions engineered for performance, scalability, and native feel. From UI finesse to backend stability, we craft seamless, high-quality mobile experiences.</p>
+                        <p className="our-team-cards-one-para">End-to-end mobile app solutions built for performance, scalability, and a native user experience. From polished UI to robust backend, we deliver seamless, high-quality apps.</p>
                         <ul className="our-team-cards-one-list">
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Seamless User Experience – Ensure smooth navigation and intuitive interfaces that keep users engaged from first tap to final action.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Secure Authentication – Implement login via email, OTP, or social platforms with token-based security and encryption.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>In-App Payment Integration – Securely handle purchases or subscriptions using Stripe, Razorpay, Apple Pay, or Google Pay.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Seamless User Experience – Deliver intuitive interfaces and smooth navigation to  users.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Secure Authentication – Support email, OTP, social logins with token-based encrypted security.
+                            </p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>In-App Payment Integration – Handle purchases securely via Stripe, Razorpay, Apple, Google Pay.
+                            </p></li>
                         </ul>
                     </div>
                     {/* add */}
                     <div className="our-team-cards-one">
                         <Image src="/codeIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>AI ML Building</strong></p>
-                        <p className="our-team-cards-one-para">AI-driven systems tailored to optimize operations, enhance decision-making, and unlock predictive insights. From model training to real-time deployment, we deliver intelligent solutions with precision and scalability.</p>
+                        <p className="our-team-cards-one-para">We build AI systems to streamline operations, enhance decisions, and deliver predictive insights.</p>
                         <ul className="our-team-cards-one-list">
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>
-                                Smart Automation – Streamline workflows and repetitive tasks using intelligent models that learn and adapt over time.</p></li>
+                                Smart Automation – Streamline workflows by automating tasks using adaptive, continuously learning AI models.</p></li>
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>
-                                Predictive Analytics – Leverage historical data to forecast trends, customer behavior, and operational outcomes with accuracy.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p> Custom Model Development – Build and deploy machine learning models tailored to your specific business needs classification, recommendation, NLP, or vision.</p></li>
+                                Predictive Analytics – Analyze historical data to predict trends, behavior, and operational outcomes accurately.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Custom Model Development – Build ML models tailored to business needs like NLP, vision, recommendations.</p></li>
                         </ul>
                     </div>
                     <div className="our-team-cards-two">
-                        <Image src="/ai-chatbot.webp" width={580} height={564} alt="code image" />
+                        <Image src="/ai-solutions.png" width={580} height={564} alt="code image" />
                     </div>  
                     <div className="our-team-cards-two">
                         <Image src="/devops-img.jpg" width={580} height={564} alt="code image" />
@@ -87,11 +89,11 @@ const ourTeamComp = () => {
                     <div className="our-team-cards-one">
                         <Image src="/codeIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>DevOps & Cloud Infrastructure</strong></p>
-                        <p className="our-team-cards-one-para">Reliable, scalable, and secure infrastructure solutions designed to streamline deployment, enhance uptime, and support continuous delivery. From CI/CD pipelines to cloud-native architecture, we ensure performance and resilience at scale.</p>
+                        <p className="our-team-cards-one-para">Scalable & Secure Infrastructure – Simplify deployment, ensure uptime, and support continuous delivery with CI/CD and cloud-native setups</p>
                         <ul className="our-team-cards-one-list">
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p> Automated CI/CD Pipelines – Accelerate development with continuous integration and delivery setups using tools like Jenkins, GitHub Actions, or GitLab CI.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Cloud Deployment & Scaling – Launch and manage apps on AWS, Azure, or GCP with autoscaling, load balancing, and container orchestration via Docker & Kubernetes.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Infrastructure as Code (IaC) – Maintain consistency and speed using tools like Terraform or AWS CloudFormation for automated infrastructure provisioning.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Automated CI/CD Pipelines – Accelerate development with Jenkins, GitHub Actions, or GitLab CI.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Cloud Deployment & Scaling – Manage apps on AWS, Azure, GCP with autoscaling, orchestration.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Infrastructure as Code (IaC) – Automate infrastructure setup with Terraform or CloudFormation tools.</p></li>
                         </ul>
                     </div>
                 </div>

@@ -23,13 +23,15 @@
 }
 
 .projects__image {
-  max-width: 35.5rem;
+  /* max-width: 35.5rem; */
+  max-width: 38.5rem;
   max-height: 28.25rem;
   width: 100%;
   height: auto;
   display: block;
   margin: 0 4rem 2rem auto;
   transition: background-color 2s ease, transform 2s ease;
+  border-radius: 0.8rem;
 }
 
 /* .projects__image:hover {

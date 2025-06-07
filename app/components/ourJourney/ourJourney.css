@@ -57,9 +57,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
+    /* width: 65%; */
+    width: 70%;
     gap: 20 rem;
-    margin: 0rem 5rem;
+    margin: 1.5rem 5rem;
     bottom: 10rem;
 }
 
@@ -112,7 +113,8 @@
 
 .bottomCard {
     margin-left: 9rem;
-    margin-right: -1rem !important;
+    margin-right: -4rem !important;
+    /* -1 to -4  */
 }
 
 
@@ -193,6 +195,7 @@
         align-self: flex-start;
         background-color: rgb(255, 255, 255);
         margin-left: 0rem;
+        margin-top: 6rem;
     }
 
     .journey-container .journey-card:nth-child(odd),
@@ -203,6 +206,7 @@
 
     .journey-container .journey-card.top-card:nth-child(odd) {
         margin-left: 12.8rem;
+        margin-top: 4rem;
     }
 
     #hide {
