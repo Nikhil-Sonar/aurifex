@@ -35,11 +35,12 @@ const ourTeamComp = () => {
                     </div>
                     <div className="our-team-cards-four"> <Image src="/editIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>UX-UI Design </strong></p>
-                        <p className="our-team-cards-one-para">Intuitive and user-centric UX/UI design that enhances engagement and drives conversions. We craft seamless digital experiences backed by research and testing.</p>
+                        <p className="our-team-cards-one-para">Delivering intuitive, tested UI/UX that increases user satisfaction and conversion rates.</p>
                         <ul className="our-team-cards-one-list">
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>User Research & Strategy – Understanding your audience to create data-driven, user-friendly experiences.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Wireframing & Prototyping – Visualizing ideas with interactive prototypes before development.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Usability Testing & Iteration – Refining designs based on real user feedback for optimal performance.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>User Research & Strategy – Understand users and craft data-driven, user-friendly digital experiences.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Wireframing & Prototyping – Understand users and craft data-driven, user-friendly digital experiences.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Usability Testing & Iteration – User feedback drives continuous design refinement.
+                            </p></li>
                         </ul>
                     </div>
                     <div className="our-team-cards-five"> <Image src="/saasIcon.svg" width={48} height={48} alt="code tag icon" />
@@ -58,7 +59,7 @@ const ourTeamComp = () => {
                     <div className="our-team-cards-one">
                         <Image src="/codeIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>Mobile-App Development</strong></p>
-                        <p className="our-team-cards-one-para">End-to-end mobile app solutions built for performance, scalability, and a native user experience. From polished UI to robust backend, we deliver seamless, high-quality apps.</p>
+                        <p className="our-team-cards-one-para">End-to-end mobile app development with native experience, responsive polished UI, and backend strength.</p>
                         <ul className="our-team-cards-one-list">
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Seamless User Experience – Deliver intuitive interfaces and smooth navigation to  users.</p></li>
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Secure Authentication – Support email, OTP, social logins with token-based encrypted security.
@@ -74,10 +75,10 @@ const ourTeamComp = () => {
                         <p className="our-team-cards-one-para">We build AI systems to streamline operations, enhance decisions, and deliver predictive insights.</p>
                         <ul className="our-team-cards-one-list">
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>
-                                Smart Automation – Streamline workflows by automating tasks using adaptive, continuously learning AI models.</p></li>
+                                Smart Automation – Automate tasks with adaptive, continuously learning AI models.</p></li>
                             <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>
-                                Predictive Analytics – Analyze historical data to predict trends, behavior, and operational outcomes accurately.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Custom Model Development – Build ML models tailored to business needs like NLP, vision, recommendations.</p></li>
+                                Predictive Analytics – Analyze historical data to forecast behavior and business outcomes.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Custom Model Development – Build custom AI models for NLP, vision, and recommendations.</p></li>
                         </ul>
                     </div>
                     <div className="our-team-cards-two">
@@ -89,11 +90,11 @@ const ourTeamComp = () => {
                     <div className="our-team-cards-one">
                         <Image src="/codeIcon.svg" width={48} height={48} alt="code tag icon" />
                         <p className="our-team-cards-one-heading"><strong>DevOps & Cloud Infrastructure</strong></p>
-                        <p className="our-team-cards-one-para">Scalable & Secure Infrastructure – Simplify deployment, ensure uptime, and support continuous delivery with CI/CD and cloud-native setups</p>
+                        <p className="our-team-cards-one-para">Secure, scalable infrastructure powered by cloud-native CI/CD deployment pipelines.</p>
                         <ul className="our-team-cards-one-list">
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Automated CI/CD Pipelines – Accelerate development with Jenkins, GitHub Actions, or GitLab CI.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Cloud Deployment & Scaling – Manage apps on AWS, Azure, GCP with autoscaling, orchestration.</p></li>
-                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Infrastructure as Code (IaC) – Automate infrastructure setup with Terraform or CloudFormation tools.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Automated CI/CD Pipelines – Boost CI/CD workflows with Jenkins, GitHub, GitLab</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Cloud Deployment & Scaling – Scale efficiently with AWS, Azure, GCP, orchestration.</p></li>
+                            <li> <Image src="/checkCircle.svg" width={28} height={28} alt="check circle icon" /><p>Infrastructure as Code (IaC) – Streamline infrastructure using Terraform, CloudFormation.</p></li>
                         </ul>
                     </div>
                 </div>
