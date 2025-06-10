@@ -13,9 +13,13 @@ const Projects = () => {
     { src: '/Akshar-decor-project-image.png', title: 'Akshar Decor', type: 'Website' },
     { src: '/Furrl-project-image.png', title: 'Furrl', type: 'Mobile App' },
     { src: '/Aurifex-Connect-image.png', title: 'Aurifex Connect', type: 'Website' },
-    { src: '/Careerwale(1)-project-image.png', title: 'CareerWale', type: 'Website' },
-    { src: '/scca-project-image_.png', title: 'SCCA', type: 'Website' },
+    { src: '/project-careerwale.png', title: 'CareerWale', type: 'Website' },
+    { src: '/project-img-sccca.png', title: 'SCCA', type: 'Website' },
+  
+
   ];
+
+  
 
   useEffect(() => {
     const container = scrollRef.current;
