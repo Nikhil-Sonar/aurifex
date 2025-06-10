@@ -31,7 +31,7 @@
     width: 100%;
     margin-top: 0rem;
     display: flex;
-    gap: 3rem 4rem;
+    gap: 3rem 5rem;
     flex-wrap: wrap;
     flex-direction: row;
     margin-right: 0rem;
@@ -41,7 +41,7 @@
 .journey-card {
     color: #333333;
     border-radius: var(--card-radius);
-    padding: 0.7rem 0.4rem 0rem;
+    padding: 0.9rem 0.8rem 0.5rem;
     box-shadow: var(--card-shadow);
     min-width: 8rem;
     text-align: center;

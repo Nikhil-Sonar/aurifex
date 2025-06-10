@@ -219,7 +219,7 @@
         display: block;
         position: relative;
         z-index: 2;
-        top: 3rem;
+        top: 8rem;
     }
     .tiles-grid {
         display: grid;
@@ -227,6 +227,6 @@
         grid-auto-rows: 60px;
     }
     .banner {
-        height: 80vh;
+        height: 100vh;
     }
 }
