@@ -14,7 +14,7 @@ const footerComp = () => {
       >
          <footer>
             <div className="social-icons">
-               <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+               <a href="https://www.linkedin.com/company/aurifex-innovations" target="_blank" title="LinkedIn">
                   <Image width={24} height={24} src="/linkedinIcon.svg" alt="LinkedIn" />
                </a>
                <a href="https://facebook.com" target="_blank" title="Facebook">
