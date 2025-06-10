@@ -4,10 +4,25 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "./about-us-form.css";
 import Image from "next/image";
+import { title } from "process";
+import Modal from "../modal/modal";
 
 const AboutUsForm: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [agree, setAgree] = useState(false);
+  const [showCard, setShowCard] = useState("hide");
+  const [passData, setPassData] = useState<{
+    title: string;
+    year: string;
+    image: string;
+    card_view_title: string;
+    description: string;
+  } | null>(null);
+
+  const handleModalClose = (message: string) => {
+    setShowCard("hide");
+    // setModalShow(thankYouUserdata);
+  };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -64,132 +79,158 @@ const AboutUsForm: React.FC = () => {
       )
       .then(
         (result) => {
-          console.log("SUCCESS!", result.text);
-          alert("Message sent successfully!");
+          const thankYouUserdata = {
+            id: 1,
+            title: `Thank you! ${firstName || ""} for reaching us,`,
+            year: "",
+            card_view_title: "Thank You",
+            image: "/green-tick-image.jpg",
+            description: "One of our representatives will contact you shortly.",
+          };
+          setPassData(thankYouUserdata);
+          setShowCard("show");
           form.current?.reset();
           setAgree(false);
         },
         (error) => {
-          console.log("FAILED...", error.text);
-          alert("Something went wrong. Please try again.");
+          const thankYouUserdata = {
+            id: 1,
+            title: `Something went wrong!`,
+            year: "",
+            card_view_title: "failed",
+            image: "/red-cross-img.jpg",
+            description: 'Uh-oh! It looks like something went wrong. Please give it another try.',
+          };
+          setPassData(thankYouUserdata);
+          setShowCard("show");
         }
       );
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 150 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="contact-wrapper"
-    >
-      <div className="contact-form">
-        <h2>Get in touch</h2>
-        <p>Our friendly team would love to hear from you.</p>
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="contact-wrapper"
+      >
+        <div className="contact-form">
+          <h2>Get in touch</h2>
+          <p>Our friendly team would love to hear from you.</p>
 
-        <form ref={form} onSubmit={sendEmail}>
-          <div className="input-group">
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="input-group">
+              <div className="input-field">
+                <label htmlFor="first-name">First name*</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="user_firstname"
+                  placeholder="First name"
+                  required
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(
+                      /[^a-zA-Z\s]/g,
+                      ""
+                    );
+                  }}
+                />
+              </div>
+              <div className="input-field">
+                <label htmlFor="last-name">Last name*</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="user_lastname"
+                  placeholder="Last name"
+                  required
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(
+                      /[^a-zA-Z\s]/g,
+                      ""
+                    );
+                  }}
+                />
+              </div>
+            </div>
+
             <div className="input-field">
-              <label htmlFor="first-name">First name*</label>
+              <label htmlFor="email">Email*</label>
               <input
-                type="text"
-                id="first-name"
-                name="user_firstname"
-                placeholder="First name"
+                type="email"
+                id="email"
+                name="user_email"
+                placeholder="you@company.com"
                 required
-                onInput={(e) => {
-                  e.currentTarget.value = e.currentTarget.value.replace(
-                    /[^a-zA-Z\s]/g,
-                    ""
-                  );
-                }}
               />
             </div>
+
             <div className="input-field">
-              <label htmlFor="last-name">Last name*</label>
-              <input
-                type="text"
-                id="last-name"
-                name="user_lastname"
-                placeholder="Last name"
+              <label htmlFor="phone">Phone number</label>
+              <div className="phone-wrapper">
+                <select name="user_country_code">
+                  <option value="IN">IN</option>
+                </select>
+                <input
+                  type="text"
+                  id="phone"
+                  name="user_phone"
+                  placeholder="0000088888"
+                  maxLength={10}
+                  inputMode="numeric"
+                  pattern="\d{10}"
+                  onInput={(e) => {
+                    e.currentTarget.value = e.currentTarget.value.replace(
+                      /[^0-9]/g,
+                      ""
+                    );
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="input-field">
+              <label htmlFor="message">Message*</label>
+              <textarea
+                id="message"
+                name="user_message"
+                placeholder="Leave us a message..."
                 required
-                onInput={(e) => {
-                  e.currentTarget.value = e.currentTarget.value.replace(
-                    /[^a-zA-Z\s]/g,
-                    ""
-                  );
-                }}
-              />
+              ></textarea>
             </div>
-          </div>
 
-          <div className="input-field">
-            <label htmlFor="email">Email*</label>
-            <input
-              type="email"
-              id="email"
-              name="user_email"
-              placeholder="you@company.com"
-              required
-            />
-          </div>
-
-          <div className="input-field">
-            <label htmlFor="phone">Phone number</label>
-            <div className="phone-wrapper">
-              <select name="user_country_code">
-                <option value="IN">IN</option>
-              </select>
+            <div className="checkbox-wrapper">
               <input
-                type="text"
-                id="phone"
-                name="user_phone"
-                placeholder="0000088888"
-                maxLength={10}
-                inputMode="numeric"
-                pattern="\d{10}"
-                onInput={(e) => {
-                  e.currentTarget.value = e.currentTarget.value.replace(
-                    /[^0-9]/g,
-                    ""
-                  );
-                }}
+                type="checkbox"
+                id="agree"
+                checked={agree}
+                onChange={(e) => setAgree(e.target.checked)}
+                required
               />
+              <label htmlFor="agree" className="checkbox-wrapper-label">
+                You agree to our friendly <a href="#">privacy policy</a>.
+              </label>
             </div>
-          </div>
 
-          <div className="input-field">
-            <label htmlFor="message">Message*</label>
-            <textarea
-              id="message"
-              name="user_message"
-              placeholder="Leave us a message..."
-              required
-            ></textarea>
-          </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
 
-          <div className="checkbox-wrapper">
-            <input
-              type="checkbox"
-              id="agree"
-              checked={agree}
-              onChange={(e) => setAgree(e.target.checked)}
-              required
-            />
-            <label htmlFor="agree" className="checkbox-wrapper-label">
-              You agree to our friendly <a href="#">privacy policy</a>.
-            </label>
-          </div>
+        <div className="contact-image">
+          <Image width={360} height={640} src="/Image.png" alt="girl image" />
+        </div>
+      </motion.div>
 
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-
-      <div className="contact-image">
-        <Image width={360} height={640} src="/Image.png" alt="girl image" />
-      </div>
-    </motion.div>
+      {showCard === "show" && (
+        <Modal
+          showCard={showCard}
+          passData={passData}
+          onSendData={handleModalClose}
+        />
+      )}
+    </>
   );
 };
 

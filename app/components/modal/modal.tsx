@@ -41,6 +41,4 @@ const modal = React.memo(({ showCard, passData, onSendData }: ModalProps) => {
 })
 
 modal.displayName = 'Modal';
-
-
 export default modal
