@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "./about-us-form.css";
 import Image from "next/image";
-import { title } from "process";
 import Modal from "../modal/modal";
 
 const AboutUsForm: React.FC = () => {
@@ -19,9 +18,8 @@ const AboutUsForm: React.FC = () => {
     description: string;
   } | null>(null);
 
-  const handleModalClose = (message: string) => {
+  const handleModalClose = () => {
     setShowCard("hide");
-    // setModalShow(thankYouUserdata);
   };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -79,6 +77,7 @@ const AboutUsForm: React.FC = () => {
       )
       .then(
         (result) => {
+          console.log(result);
           const thankYouUserdata = {
             id: 1,
             title: `Thank you! ${firstName || ""} for reaching us,`,
@@ -93,6 +92,7 @@ const AboutUsForm: React.FC = () => {
           setAgree(false);
         },
         (error) => {
+          console.log(error);
           const thankYouUserdata = {
             id: 1,
             title: `Something went wrong!`,

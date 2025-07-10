@@ -9,7 +9,7 @@ const OurImpactNew = () => {
   const [returnCompleted, setReturnCompleted] = useState(0);
   const [clientCompleted, setClientCompleted] = useState(0);
 
-  const PROJECT_COUNT = 5;
+  const PROJECT_COUNT = 20;
   const RETURN_COUNT = 200;
   const CLIENT_COUNT = 100;
 
